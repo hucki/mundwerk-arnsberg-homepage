@@ -1,41 +1,57 @@
-import { mundwerkLogo } from "../components/logo";
+import { Card } from "~/components/card";
 
-// fixme: use client-loader and fallback here
-const prefersColorSchemeDark = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-);
+export function HydrateFallback() {
+  return (
+    <div id="loading-splash">
+      <div id="loading-splash-spinner" />
+      <p>Loading, please wait...</p>
+    </div>
+  );
+}
 
-console.log("prefersColorSchemeDark", prefersColorSchemeDark.matches);
 export function Welcome() {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
-        <header className="flex flex-col items-center gap-9">
-          <div className="">
-            {mundwerkLogo(prefersColorSchemeDark.matches ? "black" : "white")}
+        <div className="w-full px-4 flex flex-col gap-4">
+          <div className="w-full space-y-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Card
+              title="Unser Team"
+              description="Teamarbeit schreiben wir „GROß“, denn ein gutes Team kann
+          auch gute Arbeit leisten. So finden bei uns regelmäßig Teamsitzungen
+          statt, in denen wir uns über auftretende Fragestellungen, ... Mehr
+          dazu » "
+              imgAlt="Ein Bild eines Teams von zwei Personen"
+              imgSrc="./images/team-of-two-270x250.jpg"
+            />
+            <Card
+              title="Unsere Arbeit"
+              description="Freude an der Arbeit überträgt sich von Therapeuten auf die
+          Unsere Arbeit Freude an der Arbeit überträgt sich von Therapeuten auf
+          die Patienten. Wir arbeiten mit Herzblut für Sie, so dass der Funke
+          auf die Therapie überspringen kann. Unsere Praxis betreut sämtliche
+          Störungsbilder, ... Mehr dazu »"
+              imgAlt="Ein Bild eines Mädchens bei der Therapie"
+              imgSrc="./images/therapy-of-one-270x250.jpg"
+            />
+            <Card
+              title="Unsere Praxen"
+              description="Unsere Praxen sind hell und freundlich, auf Ihre speziellen
+          Therapiebedürfnisse eingerichtet und barrierefrei erreichbar. Sie
+          finden uns in Arnsberg: im Gesundheitszentrum am Neumarkt Neumarkt 7,
+          ... Mehr dazu »"
+              imgAlt="Ein Bild beider Standorte, links Arnsberg, rechts Neheim"
+              imgSrc="./images/standorte-270x250.jpg"
+            />
           </div>
-        </header>
-        <div className="max-w-[300px] w-full space-y-6 px-4">
-          <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-            <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-              What&apos;s next?
+          <div className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
+            <p className="leading-6 text-gray-700 dark:text-gray-200 text-center italic">
+              Sprache macht glücklich. Lachen - allein dabei werden fast 100
+              Muskeln im ganzen Körper aktiviert, von denen viele für das
+              Sprechen wichtig sind. Wir haben Spaß an unserer Arbeit und
+              möchten diesen gerne weitergeben.
             </p>
-            <ul>
-              {resources.map(({ href, text, icon }) => (
-                <li key={href}>
-                  <a
-                    className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {icon}
-                    {text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          </div>
         </div>
       </div>
     </main>
