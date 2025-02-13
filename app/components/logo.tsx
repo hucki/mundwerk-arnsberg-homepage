@@ -1,9 +1,12 @@
-export const mundwerkLogo = (backgroundColor: string = "white") => {
+interface LogoProps {
+  backgroundColor?: string;
+}
+export const Logo = ({ backgroundColor = "white" }: LogoProps) => {
   return (
     <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 800 800"
+      width="135"
+      height="135"
+      viewBox="224.439 0.186 358.231 358.231"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
