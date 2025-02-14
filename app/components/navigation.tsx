@@ -1,14 +1,27 @@
+import type { JSX } from "react";
 import { NavLink, useLocation } from "react-router";
 
-const navLinkStyles = `px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-700`;
+const navLinkStyles = `px-4 py-2 text-primary hover:bg-primary hover:text-white transition-colors duration-300`;
 
 interface NavLinkProps {
-  label: string;
+  type?: "header" | "sidebar";
+  label: JSX.Element | string;
   to: string;
   className?: string;
 }
 
-const StyledNavLink = ({
+const styles = {
+  header: {
+    active: `bg-primary text-white border-b-4 border-secondary dark:border-darkPrimary font-bold`,
+    inactive: ``,
+  },
+  sidebar: {
+    active: `rounded bg-primary text-white`,
+    inactive: `rounded bg-orange-200`,
+  },
+};
+export const StyledNavLink = ({
+  type,
   label,
   className = navLinkStyles,
   to,
@@ -18,10 +31,8 @@ const StyledNavLink = ({
 
   return (
     <NavLink
-      className={`${className} ${
-        isActive
-          ? "inset-shadow-sm inset-shadow-gray-500"
-          : "shadow-md shadow-orange-800"
+      className={`flex flex-col ${className} ${
+        styles[type || "sidebar"][isActive ? "active" : "inactive"]
       }`}
       to={to}
       end
