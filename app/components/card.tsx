@@ -14,6 +14,9 @@ export const Card = ({ title, description, imgAlt, imgSrc }: CardProps) => {
       />
       <h2 className="text-xl font-bold">{title}</h2>
       <p>{description}</p>
+      <button className="mt-6 bg-primary text-white px-4 py-2 rounded-lg hover:bg-lightorange transition">
+        Mehr erfahren
+      </button>
     </div>
   );
 };
