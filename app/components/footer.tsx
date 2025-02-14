@@ -2,7 +2,7 @@ import { TextLogo } from "./logo";
 
 export const Footer = () => {
   return (
-    <footer className="bg-background dark:bg-darkNavBackground  p-4 flex flex-col">
+    <footer className="bg-background dark:bg-darkNavBackground mt-16 p-4 flex flex-col">
       <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="text-center">
           Gerne nehmen wir Ihren Anruf zur Terminvereinbarung entgegen

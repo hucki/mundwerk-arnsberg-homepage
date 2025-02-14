@@ -21,7 +21,7 @@ export const Stage = ({
           imgStaging === "right" ? "md:order-2" : ""
         }`}
       />
-      <div className="p-4 bg-white dark:bg-gray-950 dark:text-gray-200 rounded-lg">
+      <div className="p-4 bg-white dark:bg-darkBackground dark:text-gray-200">
         <h2 className="text-3xl font-bold pb-4">{title}</h2>
         <p className="text-justify">{description}</p>
         <button className="mt-6 bg-primary text-white px-4 py-2 rounded-lg hover:bg-lightorange transition">
