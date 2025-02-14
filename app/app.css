@@ -3,6 +3,18 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-primary: #f47921;
+  --color-darkPrimary: #ff8c42;
+  --color-background: #faf6ef;
+  --color-darkBackground: #2c2c2c;
+  --color-navBackground: #f6e6cd;
+  --color-darkNavBackground: #3a3a3a;
+  --color-text: #6c6d70;
+  --color-darkText: #e5e5e5;
+  --color-secondary: #6c6d70;
+  --color-altgray: #66676a;
+  --color-lightorange: #f47317;
+  --color-darkgray: #696a6d;
 }
 
 html,
