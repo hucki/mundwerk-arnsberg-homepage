@@ -34,19 +34,31 @@ export const Logo = ({ size = 135 }: LogoProps) => {
 
 interface TextLogoProps {
   className?: string;
+  hasSubline?: boolean;
+  textSize?: string;
 }
 
-export const TextLogo = ({ className = "" }: TextLogoProps) => {
+export const TextLogo = ({
+  className = "",
+  hasSubline = true,
+  textSize = "text-2xl",
+}: TextLogoProps) => {
   return (
-    <div className={`grid grid-cols-1 grid-rows-2 ${className}`}>
-      <span className="text-2xl font-bold">
-        <span className="text-orange-500">MUND</span>
-        <span className="text-gray-500 dark:text-gray-400">WERK</span>
+    <span
+      className={`not-italic grid grid-cols-1 ${
+        hasSubline && "grid-rows-2"
+      }  ${className}`}
+    >
+      <span className={`${textSize} font-bold`}>
+        <span className="text-primary">MUND</span>
+        <span className="text-secondary dark:text-gray-400">WERK</span>
       </span>
-      <span className="text-gray-600 dark:text-gray-400">
-        Logopädische Praxis
-      </span>
-    </div>
+      {hasSubline && (
+        <span className="text-secondary dark:text-gray-400 whitespace-nowrap">
+          Logopädische Praxis
+        </span>
+      )}
+    </span>
   );
 };
 
@@ -57,7 +69,7 @@ interface ComboLogoProps {
 export const ComboLogo = ({ size = 42, className = "" }: ComboLogoProps) => {
   return (
     <div
-      className={`grid grid-cols-2 gap-2 justify-items-end items-center  ${className}`}
+      className={`grid grid-cols-[auto_auto] gap-2 justify-items-end items-center  ${className}`}
     >
       <Logo size={size} />
       <TextLogo className="justify-self-start" />
