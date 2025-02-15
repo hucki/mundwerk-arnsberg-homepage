@@ -50,9 +50,13 @@ export function Navigation() {
       <StyledNavLink to="/" className={navLinkStyles} label="Home" />
 
       <StyledNavLink to="/team" className={navLinkStyles} label="Team" />
-      <StyledNavLink to="/work" className={navLinkStyles} label="Arbeit" />
-      <StyledNavLink to="/venues" className={navLinkStyles} label="Standorte" />
-      <StyledNavLink to="/contact" className={navLinkStyles} label="Kontakt" />
+      <StyledNavLink to="/arbeit" className={navLinkStyles} label="Arbeit" />
+      <StyledNavLink
+        to="/standorte"
+        className={navLinkStyles}
+        label="Standorte"
+      />
+      <StyledNavLink to="/kontakt" className={navLinkStyles} label="Kontakt" />
     </nav>
   );
 }

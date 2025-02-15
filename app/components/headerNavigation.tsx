@@ -43,7 +43,7 @@ export const HeaderNavigation = ({ className }: HeaderNavigationProps) => {
         </li>
         <li>
           <StyledNavLink
-            to="/work"
+            to="/arbeit"
             label={
               <span className="flex flex-row gap-1">
                 <RiEmotion2Line />
@@ -55,7 +55,7 @@ export const HeaderNavigation = ({ className }: HeaderNavigationProps) => {
         </li>
         <li>
           <StyledNavLink
-            to="/venues"
+            to="/standorte"
             label={
               <span className="flex flex-row gap-1">
                 <RiBuilding2Line />
@@ -67,7 +67,7 @@ export const HeaderNavigation = ({ className }: HeaderNavigationProps) => {
         </li>
         <li>
           <StyledNavLink
-            to="/contact"
+            to="/kontakt"
             label={
               <span className="flex flex-row gap-1">
                 <RiContactsBook2Line />
