@@ -1,3 +1,15 @@
+import type { Route } from "./+types/dataProtection";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Mundwerk Logopädische Praxis - Datenschutzerklärung" },
+    {
+      name: "description",
+      content: "Auf dieser Seite finden Sie Datenschutzerklärung.",
+    },
+  ];
+}
+
 export default function DataProtection() {
   return (
     <>

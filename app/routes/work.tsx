@@ -1,5 +1,17 @@
 import { Hero } from "~/components/hero";
 import { Stage } from "~/components/stage";
+import type { Route } from "./+types/work";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Mundwerk Logopädische Praxis - Unsere Arbeit" },
+    {
+      name: "description",
+      content:
+        "Auf dieser Seite finden Sie Informationen zu den von uns angewandten Behandlungsmethoden und unserer Arbeitsphilosophie.",
+    },
+  ];
+}
 
 export default function Work() {
   return (

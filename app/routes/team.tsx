@@ -4,7 +4,7 @@ import { Stage } from "~/components/stage";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Mundwerk Arnsberg - Team" },
+    { title: "Mundwerk Logopädische Praxis - Team" },
     { name: "description", content: "Hier stellen wir uns vor" },
   ];
 }

@@ -1,4 +1,15 @@
 import { TextLogo } from "~/components/logo";
+import type { Route } from "./+types/imprint";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Mundwerk Logopädische Praxis - Impressum" },
+    {
+      name: "description",
+      content: "Auf dieser Seite finden Sie unser Impressum.",
+    },
+  ];
+}
 
 export default function Imprint() {
   return (

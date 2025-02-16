@@ -3,8 +3,12 @@ import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Mundwerk Logopädische Praxis - Home" },
+    {
+      name: "description",
+      content:
+        "Willkommen bei der Logopädsichen Praxis Mundwerk in Arnsberg und Neheim",
+    },
   ];
 }
 

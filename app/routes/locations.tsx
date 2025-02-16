@@ -4,10 +4,11 @@ import { Hero } from "~/components/hero";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Mundwerk Arnsberg - Standorte" },
+    { title: "Mundwerk Logopädische Praxis - Standorte" },
     {
       name: "description",
-      content: "Unsere Standorte - Hier behandeln wir Sie gerne",
+      content:
+        "Unsere Praxisstandorte in Arnsberg und Neheim - Hier behandeln wir Sie gerne",
     },
   ];
 }

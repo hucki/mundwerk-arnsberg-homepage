@@ -1,5 +1,17 @@
 import { AddressCard } from "~/components/addressCard";
 import { Hero } from "~/components/hero";
+import type { Route } from "./+types/contact";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Mundwerk Logopädische Praxis - Kontakt" },
+    {
+      name: "description",
+      content:
+        "Auf dieser Seite finden Sie die Kontaktdaten und Anschriften unserer beiden Praxisstandorte in Arnsberg und Neheim.",
+    },
+  ];
+}
 
 export default function Contact() {
   return (
